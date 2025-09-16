@@ -1,0 +1,267 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "cairo", sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+.text {
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    padding: 4px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: .5s;
+    color: #fff;
+}
+
+input:focus {
+    background-color: #000;
+    transform: scale(1.1);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#total {
+    background-color: #a00d02;
+    width: 100%;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+#total::before {
+    content: "Total : ";
+}
+
+button {
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+    border-radius: 20px;
+    background-color: rgb(68, 12, 68);
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: purple;
+    letter-spacing: 2px;
+}
+
+.searchBtn {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    margin: 30px 0;
+    border-top: 1px solid #fff;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 5px;
+} */
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    padding: 15px;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Title */
+.text {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: #111;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: .3s;
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+/* Price Section */
+.price {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+}
+
+#total {
+    background-color: #a00d02;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#total::before {
+    content: "Total: ";
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(68, 12, 68);
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: purple;
+    letter-spacing: 1px;
+}
+
+/* Search Section */
+.searchBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.searchBtn button {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #444;
+    padding: 8px;
+    word-break: break-word;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        background: #111;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #333;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
